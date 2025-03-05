@@ -3,9 +3,11 @@ df_s['comparison_three']
 df_s['comparison_three'] = df_s['comparison_three'].replace({2: 0, 3: 1})#Relabeling, will label LC patients with 1 and no LC patients with 0. 
 df_s['sex'] = df_s['sex'].replace({2: 1, 1: 0})
 labels = df_s.pop("comparison_three")
+#Last 25 variables are clinical covariates.
+clin_covariates = df_s.columns[-25:].tolist()
 
-df_species = df_s.drop(columns=['age', 'dis_sev', 'sex', 'CCI_score', 'BMI','ppi', 'fully_vac_index', 'thirty_day_antibiotic', 'immunosuppression', 'DM', 'rend', 'cpd', 'ibd', 'metacanc', 'mi', 'msld', 'transplant_hx', 'rheumd', 'steroids', 'cancer_chemo', 'calcineurin_inh', 'antimetabolites', 'biologics', 'antiproliferative_agents', 'other'])
-df_meta = df_s[['age', 'dis_sev', 'sex', 'CCI_score', 'BMI', 'ppi','fully_vac_index', 'thirty_day_antibiotic', 'immunosuppression', 'DM', 'rend', 'cpd', 'ibd', 'metacanc', 'mi', 'msld', 'transplant_hx', 'rheumd', 'steroids', 'cancer_chemo', 'calcineurin_inh', 'antimetabolites', 'biologics', 'antiproliferative_agents', 'other']]
+df_species = df_s.drop(columns=clin_covariates)
+df_meta = df_s[clin_covariates]
 
 #Look at the missing data 
 print(df_meta.isna().any())

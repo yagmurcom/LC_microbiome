@@ -50,7 +50,7 @@ Scripts for alpha and beta diversity analysis, differential abundance testing us
     
 microbiome plots as described in the Methods section of the manuscript.
 
-📂 Model/ — Data preparation for predictive models
+📂 Model/ — Data processing for predictive models
 
 Scripts used to generate input data tables for machine learning models.
     

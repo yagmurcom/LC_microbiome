@@ -13,9 +13,7 @@ R/ → Scripts for microbiome data processing, comparative analysis, and input d
 Contains scripts for building predictive models using nested cross-validation, as well as feature selection and preprocessing steps.
 
 📂lib/ — Library imports & preprocessing
-     lib_nn.py & lib_logit.py → Defines required Python libraries for predictive modeling. 
-
-If these libraries are not  installed, use pip or conda to install them.
+     lib_nn.py & lib_logit.py → See required Python libraries. If not installed, need to use pip or conda commands to install them.
 
      Preprocessing.py → Loads and preprocesses microbiome and clinical data before modeling. 
      

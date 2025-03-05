@@ -31,8 +31,8 @@ Contains scripts for building predictive models using nested cross-validation, a
      Features are extracted from the highest-performing outer-loop fold and repeated across 50 nested cross- 
      validation runs.
 
-features_logit.py → Extracts key features from logistic regression models.
-features_nn.py → Extracts key features from neural network models.
+     features_logit.py → Extracts key features from logistic regression models.
+     features_nn.py → Extracts key features from neural network models.
 
 ## **R Folder (R/)**
 Contains scripts for microbiome data processing, statistical analysis, visualization, and model input preparation.

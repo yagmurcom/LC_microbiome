@@ -1,5 +1,4 @@
-X_combined = pd.concat([X_meta, df_species], axis=1)
-
+X_combined = pd.concat([X_meta, X_clr], axis=1)
 scaler = MinMaxScaler()
 X_combined_scaled = scaler.fit_transform(X_combined)
 X_combined_scaled = pd.DataFrame(X_combined_scaled)

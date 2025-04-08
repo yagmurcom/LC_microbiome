@@ -1,7 +1,4 @@
-X_scaled_microbiome = scaler.fit_transform(df_species)
-y = labels
 
-#Will use the same model architecture similar to clinical variable model.
 def create_model_microbiome(neurons=64,dropout_rate=0.5):
     model = tf.keras.Sequential([
         tf.keras.layers.Dense(neurons, activation='relu', input_shape=(X_scaled_microbiome.shape[1],)),
